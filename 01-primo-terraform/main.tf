@@ -5,6 +5,14 @@ terraform {
       version = "~> 5.0"
     }
   }
+
+  backend "s3" {
+    bucket         = "domenico-terraform-state"
+    key            = "cloud-lab/01-primo-terraform/terraform.tfstate"
+    region         = "eu-west-1"
+    dynamodb_table = "terraform-state-lock"
+    encrypt        = true
+  }
 }
 
 provider "aws" {
