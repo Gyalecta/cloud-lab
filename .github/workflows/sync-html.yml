@@ -7,6 +7,8 @@ on:
     paths:
       - '01-primo-terraform/index.html'
 
+
+# Trigger the workflow on a schedule (e.g., every day at midnight)      
 jobs:
   sync:
     runs-on: ubuntu-latest
